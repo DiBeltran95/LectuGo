@@ -1,0 +1,89 @@
+﻿@model DataBaseExample.Models.Model_User
+@{
+    ViewBag.Title = "RegistroSeubMenu";
+}
+
+<div class="container">
+    <div class="page-header">
+        <h1 class="all-tittles">Administación<small> de SubMenu</small></h1>
+    </div>
+</div>
+<div class="container-fluid">
+    <ul class="nav nav-tabs nav-justified" style="font-size: 17px;">
+        <li role="presentation" class="active"><a href="admin.html">Administradores</a></li>
+        <li role="presentation"><a href="teacher.html">Docentes</a></li>
+    </ul>
+</div>
+<br>
+
+
+<div class="container-fluid">
+    <div class="container-flat-form">
+        <div class="title-flat-form title-flat-blue">Registro de SubMenu</div>
+        <div align="center">
+        </div>
+
+        <div class="container-fluid">
+            <ul class="nav nav-tabs nav-justified" style="font-size: 17px;">
+                <li role="presentation" class="active"><a href="admin.html">Administradores</a></li>
+                <li role="presentation"><a href="teacher.html">Docentes</a> </li>
+                <li role="presentation"><a href="admin.html">usuario</a></li>
+                <li role="presentation"><a href="teacher.html">comida</a></li>
+            </ul>
+        </div>
+        <br />
+        <br />
+        <form autocomplete="off">
+            <div class="row">
+                <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                    <div class="group-material">
+                        <input type="text" class="material-control tooltips-general" placeholder="Nombre" required="" maxlength="70" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,70}" data-toggle="tooltip" data-placement="top" title="Escribe el nombre para el SubMenu">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Nombre</label>
+                    </div>
+
+                    <div class="group-material">
+                        <input type="text" class="material-control tooltips-general" placeholder="Nombre" required="" maxlength="70" data-toggle="tooltip" data-placement="top" title="Escribe el Link para el SubMenu">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Link</label>
+                    </div>
+
+                    <p class="text-center">
+                        <button type="submit" class="btn btn-primary"><i class="zmdi zmdi-floppy"></i> &nbsp;&nbsp; Guardar</button>
+                    </p>
+                </div>
+            </div>
+        </form>
+
+        <div class="container-fluid">
+            <h2 class="text-center all-tittles">Listado de SubMenu</h2>
+            <div class="table-responsive">
+                <div class="div-table" style="margin:0 !important;">
+                    <div class="div-table-row div-table-row-list" style="background-color:#DFF0D8; font-weight:bold;">
+                        <div class="div-table-cell" style="width: 6%;">#</div>
+                        <div class="div-table-cell" style="width: 22%;">Nombre</div>
+                        <div class="div-table-cell" style="width: 22%;">link</div>
+                        <div class="div-table-cell" style="width: 8%;">Eliminar</div>
+                        <div class="div-table-cell" style="width: 8%;">Actualizar</div>
+                    </div>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <div class="div-table" style="margin:0 !important;">
+                    <div class="div-table-row div-table-row-list">
+                        <div class="div-table-cell" style="width: 6%;">#</div>
+                        <div class="div-table-cell" style="width: 22%;">Nombre de Libro</div>
+                        <div class="div-table-cell" style="width: 22%;">Nombre de Usuario</div>
+                        <div class="div-table-cell" style="width: 8%;">
+                            <button class="btn btn-danger"><i class="zmdi zmdi-delete"></i></button>
+                        </div>
+                        <div class="div-table-cell" style="width: 8%;">
+                            <button class="btn btn-info"><i class="zmdi zmdi-file-text"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

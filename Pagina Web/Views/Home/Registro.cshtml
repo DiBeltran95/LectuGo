@@ -1,0 +1,63 @@
+﻿@model DataBaseExample.Models.Model_User
+@{
+    ViewBag.Title = "Registro";
+}
+@using (Html.BeginForm())
+{
+<div class="container">
+    <div class="page-header">
+        <h1 class="all-tittles">Registro <small>Nuevo Usuario</small></h1>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="container-flat-form">
+        <div class="title-flat-form title-flat-blue">Datos Personales</div>
+            <div align="center">
+              <div class="container-fluid" style="margin: 40px 0;">
+                 <img src="~/Content/assets/img/user05.png" alt="user" class="img-responsive center-box" style="max-width: 110px;">
+              </div>
+         </div>
+        <form autocomplete="off" action="Registro" method="post">
+            <div class="row">
+                <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                    <div class="group-material">
+                        <input type="text" name="nombres" class="material-control tooltips-general" placeholder="Escribe aquí los nombres del personal administrativo" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,50}" required="" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe los nombres del personal administrativo, solamente letras">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Nombres</label>
+                    </div>
+                    <div class="group-material">
+                        <input type="text" name="apellidos" class="material-control tooltips-general" placeholder="Escribe aquí los apellidos del personal administrativo" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,50}" required="" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe los apellidos del personal administrativo, solamente letras">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Apellidos</label>
+                    </div>
+                    <div class="group-material">
+                        <input type="email" name="correo" class="material-control tooltips-general" placeholder="E-mail" required="" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe el Email del administrador">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Email</label>
+                    </div>
+                    <div class="group-material">
+                        <input type="password" name="contrasena" class="material-control tooltips-general" placeholder="Contraseña" required="" maxlength="200" data-toggle="tooltip" data-placement="top" title="Escribe una contraseña">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Contraseña</label>
+                    </div>
+                    <div class="group-material">
+                        <input type="password" class="material-control tooltips-general" placeholder="Repite la contraseña" required="" maxlength="200" data-toggle="tooltip" data-placement="top" title="Repite la contraseña">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Repetir contraseña</label>
+                    </div>
+                    <p class="text-center">
+                        <button type="reset" class="btn btn-info" style="margin-right: 20px;"><i class="zmdi zmdi-roller"></i> &nbsp;&nbsp; Limpiar</button>
+                        <button type="submit" class="btn btn-primary"><i class="zmdi zmdi-floppy"></i> &nbsp;&nbsp; Guardar</button>
+                    </p>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+}

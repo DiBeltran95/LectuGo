@@ -1,0 +1,39 @@
+﻿@model DataBaseExample.Models.Model_User
+@{
+    ViewBag.Title = "Iniciar";
+}
+@using (Html.BeginForm())
+{
+<div class="container-fluid">
+    <div class="container-flat-form">
+        <div class="title-flat-form title-flat-blue">Iniciar Sesion</div>
+        <div align="center">
+            <div class="container-fluid" style="margin: 40px 0;">
+                <img src="~/Content/assets/img/user05.png" alt="user" class="img-responsive center-box" style="max-width: 110px;">
+            </div>
+        </div>
+        <form autocomplete="off" action="Iniciar" method="post">
+            <div class="row">
+                <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                    <div class="group-material">
+                        <input type="email" name="correo" class="material-control tooltips-general" placeholder="E-mail" required="" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe su Correo">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Email</label>
+                    </div>
+                    <div class="group-material">
+                        <input type="password" name="contrasena" class="material-control tooltips-general" placeholder="Contraseña" required="" maxlength="100" data-toggle="tooltip" data-placement="top" title="Escribe su Contraseña">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Contraseña</label>
+                    </div>
+                    <p class="text-center">
+                        <button type="reset" class="btn btn-info" style="margin-right: 20px;"><i class="zmdi zmdi-roller"></i> &nbsp;&nbsp; Limpiar</button>
+                        <button type="submit" class="btn btn-primary"><i class="zmdi zmdi-floppy"></i> &nbsp;&nbsp; Entrar</button>
+                    </p>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+}
